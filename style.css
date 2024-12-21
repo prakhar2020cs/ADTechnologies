@@ -127,7 +127,7 @@ transition: transform 400ms;
   display: flex;
 }
 /* --------------------Services---------------------- */
-.Services h2 {
+:is(.Services, .Process, .SectorExpertise ) h2 {
   font-family: Nunito Sans;
   font-size: 15px;
   font-weight: 500;
@@ -137,7 +137,7 @@ transition: transform 400ms;
   text-decoration-skip-ink: none;
   color: black;
 }
-.Services h1 {
+ :is(.Services, .Process, .SectorExpertise) h1{
   font-family: Montserrat;
   font-size: 36px;
   font-weight: 400;
@@ -147,7 +147,7 @@ transition: transform 400ms;
   text-decoration-skip-ink: none;
   color: rgba(19, 74, 142, 1);
 }
-.Services span {
+:is(.Services, .Process, .SectorExpertise) span {
   font-family: Montserrat;
   font-size: 36px;
   font-weight: 700;
@@ -211,13 +211,7 @@ transition: transform 400ms;
   box-shadow: 0px 4px 16px 0px rgba(19, 74, 142, 0.3);
 }
 
-/* .Services .Cards .Card:hover svg path,
-.Process .Cards .Card:hover svg path,
-.Process .Cards .Card:hover p,
-.Process .Cards .Card:hover h4,
-.Services .Cards .Card:hover a,
-.Services .Cards .Card:hover li,
-.Services .Cards .Card:hover h3  is replaced using :is() */
+
 
 :is(.Services .Cards .Card:hover,.Process .Cards .Card:hover ) :is(p,h4 ,a , li, h3,svg:has(~ul) path )   /* because services section has ul as sibling of svg so only services svg path will be selected*/ {
   color: white;
@@ -226,39 +220,11 @@ transition: transform 400ms;
 
 /* ------------------------Sector Expertise------------------------ */
 .SectorExpertise {
+  padding: 8% 0% 1%;
   background-color: rgba(248, 248, 248, 1);
 }
 
-.SectorExpertise h1 {
-  font-family: Montserrat;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 43.2px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: rgba(19, 74, 142, 1);
-}
-.SectorExpertise h1 span {
-  font-family: Montserrat;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 43.2px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: rgba(19, 74, 142, 1);
-}
-.SectorExpertise h2 {
-  font-family: Nunito Sans;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: black;
-}
+
 
 .SectorExpertise .Card {
   overflow: hidden;
@@ -353,37 +319,7 @@ transition: transform 400ms;
 
 /* ----------------------------------------Process--------------------------------- */
 
-.Process h2 {
-  font-family: Nunito Sans;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: black;
-}
-.Process h1 {
-  font-family: Montserrat;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 43.2px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: rgba(19, 74, 142, 1);
-}
-.Process span {
-  font-family: Montserrat;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 43.2px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 
-  color: rgba(19, 74, 142, 1);
-}
 
 .Process h3 {
   font-family: Nunito Sans;
@@ -422,3 +358,86 @@ transition: transform 400ms;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* .Services .Cards .Card:hover svg path,
+.Process .Cards .Card:hover svg path,
+.Process .Cards .Card:hover p,
+.Process .Cards .Card:hover h4,
+.Services .Cards .Card:hover a,
+.Services .Cards .Card:hover li,
+.Services .Cards .Card:hover h3  is replaced using :is() */
+
+/* .SectorExpertise h1 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.SectorExpertise h1 span {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.SectorExpertise h2 {
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+} */
+
+
+
+/* .Process h2 {
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+} */
+/* .Process h1 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+} */
+/* .Process span {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: rgba(19, 74, 142, 1);
+} */
