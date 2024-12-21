@@ -1,0 +1,14 @@
+@media(max-width:900px){
+    .Navbar .Logo{
+        scale: 0.7;
+    }
+    .Navbar li {
+       text-decoration: underline;
+        margin-right: 1%;
+    }
+}
+@media(max-width:768px){
+    .SectorExpertise .Card{
+        margin-bottom: 2%;
+    }
+}

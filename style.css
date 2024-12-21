@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+* {
+  transition: all 600ms ease;
+}
+
+.container {
+  margin-bottom: 8%;
+  max-width: 1240px;
+}
+
+.Logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.Hero_Nav_Bgcontainer {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  height: 100vh;
+  background-image: url(./images/HeroBackground.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.NavLink {
+  text-align: center;
+  box-shadow: 0px 2px 5px 0px rgba(0, 71, 171, 0.1);
+  color: white;
+  background: linear-gradient(90deg, #134a8e 0%, #041a36 100%);
+}
+
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+
+.Navbar li a {
+  font-family: Nunito Sans !important;
+  font-size: clamp(0.625rem, 0.242rem + 0.816vw, 0.875rem);
+  font-weight: 400;
+  line-height: 18.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+header .container {
+  margin-bottom: 2%;
+}
+
+.Navbar .Mid {
+  align-content: end;
+}
+
+.BlueButton {
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  display: block;
+  max-width: 255px;
+  height: auto;
+  padding: 14px 30px 14px 30px;
+
+  border-radius: 8px;
+
+  background: linear-gradient(90deg, #134a8e 0%, #041a36 100%);
+  font-family: Montserrat;
+  font-size: clamp(0.563rem, -0.107rem + 1.429vw, 1rem);
+  font-weight: 600;
+transition: transform 400ms;
+  box-shadow: 0px 2px 5px 0px rgba(0, 71, 171, 0.1);
+}
+.BlueButton:hover{
+  transform: translateY(1px) scale(1.02);
+}
+
+/* ----------------------Hero--------------- */
+.Hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hero h1 {
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: rgba(19, 74, 142, 1);
+}
+.Hero p {
+  font-family: Nunito Sans;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 31.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(107, 114, 128, 1);
+}
+.Hero img {
+  width: 100%;
+  height: auto;
+}
+.Hero a {
+  margin-bottom: 2%;
+  display: flex;
+}
+/* --------------------Services---------------------- */
+.Services h2 {
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+}
+.Services h1 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.Services span {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: rgba(19, 74, 142, 1);
+}
+
+.Services .Cards .Card {
+  padding: 3% !important;
+}
+
+.Services .Cards .Card li {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(107, 114, 128, 1);
+
+  list-style: unset;
+}
+.Services .Cards .Card h3,
+.Process .Cards .Card h4 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(8, 37, 68, 1);
+}
+
+.Services .Cards .Card a {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.Services .Cards .Card,
+.Process .Cards .Card {
+  background: rgba(243, 244, 246, 1);
+  box-shadow: 0px 4px 16px 0px rgba(19, 74, 142, 0.16);
+}
+
+.Services .Cards .Card:hover,
+.Process .Cards .Card:hover {
+  background: rgba(19, 74, 142, 1);
+  box-shadow: 0px 4px 60px 0px rgba(19, 74, 142, 0.16);
+
+  box-shadow: 0px 4px 16px 0px rgba(19, 74, 142, 0.3);
+}
+
+/* .Services .Cards .Card:hover svg path,
+.Process .Cards .Card:hover svg path,
+.Process .Cards .Card:hover p,
+.Process .Cards .Card:hover h4,
+.Services .Cards .Card:hover a,
+.Services .Cards .Card:hover li,
+.Services .Cards .Card:hover h3  is replaced using :is() */
+
+:is(.Services .Cards .Card:hover,.Process .Cards .Card:hover ) :is(p,h4 ,a , li, h3,svg:has(~ul) path )   /* because services section has ul as sibling of svg so only services svg path will be selected*/ {
+  color: white;
+  fill: rgb(220, 227, 235); /* Desired fill color */
+}
+
+/* ------------------------Sector Expertise------------------------ */
+.SectorExpertise {
+  background-color: rgba(248, 248, 248, 1);
+}
+
+.SectorExpertise h1 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.SectorExpertise h1 span {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.SectorExpertise h2 {
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+}
+
+.SectorExpertise .Card {
+  overflow: hidden;
+  margin: auto;
+  max-width: fit-content;
+  position: relative;
+  z-index: 1;
+  /* background-color: aqua !important; */
+}
+
+.SectorExpertise .Card h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  position: absolute;
+}
+
+.SectorExpertise .Card ul {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.SectorExpertise .Card a {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.SectorExpertise .Card img {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.SectorExpertise .Card .CardOnHover ul {
+  margin-top: 28%;
+}
+
+.SectorExpertise .Card .CardOnHover {
+  padding: 4%;
+  max-height: 0%;
+  max-width: 94%;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 20;
+  /* display: none; */
+  opacity: 0;
+  margin: auto;
+  inset: 0;
+  transition: max-height 400ms ease;
+}
+.SectorExpertise .Card .CardOnHover * {
+  margin-bottom: 5%;
+  list-style: none;
+  padding: 0% 8%;
+}
+.SectorExpertise .BlueButton {
+  max-width: 362px;
+}
+
+.SectorExpertise .Card:hover .CardOnHover {
+  max-height: 100%;
+  /* display: block; */
+  opacity: 0.7;
+  background: rgba(19, 74, 142, 0.8) !important;
+  box-shadow: 0px 4px 60px 0px rgba(19, 74, 142, 0.16),
+    0px 4px 16px 0px rgba(19, 74, 142, 0.3) !important ;
+  color: white;
+  fill: white;
+}
+.CardOnHover,
+.SectorExpertise .Card:hover a {
+  color: white;
+}
+
+.SectorExpertise .Card:hover svg path {
+  fill: rgb(220, 227, 235);
+}
+
+/* ----------------------------------------Process--------------------------------- */
+
+.Process h2 {
+  font-family: Nunito Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+}
+.Process h1 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.Process span {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: rgba(19, 74, 142, 1);
+}
+
+.Process h3 {
+  font-family: Nunito Sans;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 31.5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(75, 85, 99, 1);
+}
+.RoundIcon {
+  padding: 9%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 0px rgba(2, 53, 109, 0.12);
+
+  color: rgba(2, 53, 109, 1);
+  font-family: Manrope;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+.Process .col-md-2:has(.RoundIcon) {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
