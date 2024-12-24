@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -14,6 +15,17 @@ li {
 }
 * {
   transition: all 600ms ease;
+}
+.SidebarButton {
+  background-color: (76, 143, 214, 0.4);
+  padding: 1%;
+  border-radius: 50%;
+}
+.LogoTop {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .container {
@@ -44,6 +56,9 @@ li {
   color: white;
   background: linear-gradient(90deg, #134a8e 0%, #041a36 100%);
 }
+.main {
+  overflow: hidden;
+}
 
 .navbar-collapse {
   flex-grow: 0 !important;
@@ -60,6 +75,20 @@ li {
 }
 header .container {
   margin-bottom: 2%;
+}
+.Sidebar ul li {
+  padding-top: 7%;
+  color: white;
+}
+.offcanvas {
+  color: white;
+  background-color: rgba(76, 143, 214, 0.4);
+
+  backdrop-filter: blur(24px);
+}
+.SidebarButton {
+  border: 1px;
+  background-color: rgba(25, 67, 119, 0.8);
 }
 
 .Navbar .Mid {
@@ -81,11 +110,11 @@ header .container {
   font-family: Montserrat;
   font-size: clamp(0.563rem, -0.107rem + 1.429vw, 1rem);
   font-weight: 600;
-transition: transform 400ms;
+  transition: transform 400ms;
   box-shadow: 0px 2px 5px 0px rgba(0, 71, 171, 0.1);
 }
-.BlueButton:hover{
-  transform: translateY(1px) scale(1.02);
+.BlueButton:hover {
+  transform: translateY(-2px) scale(1.02);
 }
 
 /* ----------------------Hero--------------- */
@@ -127,7 +156,15 @@ transition: transform 400ms;
   display: flex;
 }
 /* --------------------Services---------------------- */
-:is(.Services, .Process, .SectorExpertise ) h2 {
+:is(
+    .Services,
+    .Process,
+    .SectorExpertise,
+    .TechExpertise,
+    .CaseStudies,
+    .ContactUs
+  )
+  h2 {
   font-family: Nunito Sans;
   font-size: 15px;
   font-weight: 500;
@@ -137,8 +174,17 @@ transition: transform 400ms;
   text-decoration-skip-ink: none;
   color: black;
 }
- :is(.Services, .Process, .SectorExpertise) h1{
+:is(
+    .Services,
+    .Process,
+    .SectorExpertise,
+    .TechExpertise,
+    .CaseStudies,
+    .ContactUs
+  )
+  h1 {
   font-family: Montserrat;
+  text-transform: uppercase;
   font-size: 36px;
   font-weight: 400;
   line-height: 43.2px;
@@ -147,7 +193,15 @@ transition: transform 400ms;
   text-decoration-skip-ink: none;
   color: rgba(19, 74, 142, 1);
 }
-:is(.Services, .Process, .SectorExpertise) span {
+:is(
+    .Services,
+    .Process,
+    .SectorExpertise,
+    .TechExpertise,
+    .CaseStudies,
+    .ContactUs
+  )
+  span {
   font-family: Montserrat;
   font-size: 36px;
   font-weight: 700;
@@ -160,10 +214,11 @@ transition: transform 400ms;
 }
 
 .Services .Cards .Card {
+  border-radius: 12px;
   padding: 3% !important;
 }
 
-.Services .Cards .Card li {
+:is(.Services .Cards .Card, .TechExpertise .Card) :is(li, p) {
   font-family: Nunito Sans;
   font-size: 16px;
   font-weight: 400;
@@ -187,7 +242,8 @@ transition: transform 400ms;
   color: rgba(8, 37, 68, 1);
 }
 
-.Services .Cards .Card a {
+.Services .Cards .Card a,
+.TechExpertise .Card a {
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 600;
@@ -198,24 +254,25 @@ transition: transform 400ms;
   color: rgba(19, 74, 142, 1);
 }
 .Services .Cards .Card,
-.Process .Cards .Card {
+.Process .Cards .Card,
+.TechExpertise .Card {
   background: rgba(243, 244, 246, 1);
   box-shadow: 0px 4px 16px 0px rgba(19, 74, 142, 0.16);
 }
 
 .Services .Cards .Card:hover,
-.Process .Cards .Card:hover {
+.Process .Cards .Card:hover,
+.TechExpertise .Card:hover {
+  transform: scale(1.05);
   background: rgba(19, 74, 142, 1);
   box-shadow: 0px 4px 60px 0px rgba(19, 74, 142, 0.16);
 
   box-shadow: 0px 4px 16px 0px rgba(19, 74, 142, 0.3);
 }
 
-
-
-:is(.Services .Cards .Card:hover,.Process .Cards .Card:hover ) :is(p,h4 ,a , li, h3,svg:has(~ul) path )   /* because services section has ul as sibling of svg so only services svg path will be selected*/ {
+:is(.Services .Cards .Card:hover,.Process .Cards .Card:hover  ) :is(p,h4 ,a , li, h3,svg path )   /* because services section has ul as sibling of svg so only services svg path will be selected*/ {
   color: white;
-  fill: rgb(220, 227, 235); /* Desired fill color */
+  fill: rgb(220, 227, 235);
 }
 
 /* ------------------------Sector Expertise------------------------ */
@@ -224,18 +281,22 @@ transition: transform 400ms;
   background-color: rgba(248, 248, 248, 1);
 }
 
-
-
 .SectorExpertise .Card {
+  border-radius: 12px;
   overflow: hidden;
   margin: auto;
   max-width: fit-content;
   position: relative;
   z-index: 1;
+  transition: transform 500ms;
   /* background-color: aqua !important; */
+}
+.SectorExpertise .Card :hover {
+  transform: scale(1.05);
 }
 
 .SectorExpertise .Card h3 {
+  margin-top: 12%;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 600;
@@ -257,6 +318,7 @@ transition: transform 400ms;
   text-decoration-skip-ink: none;
 }
 .SectorExpertise .Card a {
+  color: white;
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 600;
@@ -264,6 +326,9 @@ transition: transform 400ms;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+.SectorExpertise .Card a svg path {
+  fill: #ffffff;
 }
 
 .SectorExpertise .Card img {
@@ -273,13 +338,13 @@ transition: transform 400ms;
   left: 0;
 }
 .SectorExpertise .Card .CardOnHover ul {
-  margin-top: 28%;
+  margin-top: 25%;
 }
 
 .SectorExpertise .Card .CardOnHover {
-  padding: 4%;
+  padding: 6%;
   max-height: 0%;
-  max-width: 94%;
+  max-width: 100%;
   border-radius: 12px;
   position: absolute;
   z-index: 20;
@@ -289,11 +354,11 @@ transition: transform 400ms;
   inset: 0;
   transition: max-height 400ms ease;
 }
-.SectorExpertise .Card .CardOnHover * {
+/* .SectorExpertise .Card .CardOnHover * {
   margin-bottom: 5%;
   list-style: none;
   padding: 0% 8%;
-}
+} */
 .SectorExpertise .BlueButton {
   max-width: 362px;
 }
@@ -308,18 +373,44 @@ transition: transform 400ms;
   color: white;
   fill: white;
 }
-.CardOnHover,
+/* .CardOnHover,
 .SectorExpertise .Card:hover a {
   color: white;
+} */
+/* .SectorExpertise .CardOnHover a svg path{
+  fill: white;
 }
 
-.SectorExpertise .Card:hover svg path {
+.SectorExpertise .Card:hover .CardOnHover a svg path {
   fill: rgb(220, 227, 235);
-}
+} */
 
 /* ----------------------------------------Process--------------------------------- */
 
+.Process .Cards .Card {
+  background-color: unset;
+  border-radius: 24px;
+  padding: 3% 2%;
+  border-radius: 24px;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background: white;
+  position: relative;
+  box-shadow: 0px 4px 60px 0px rgba(19, 74, 142, 0.16) !important;
+}
 
+.Process .Card * {
+  margin-bottom: 4%;
+}
+
+.Process .Card p {
+  color: rgba(107, 114, 128, 1);
+}
 
 .Process h3 {
   font-family: Nunito Sans;
@@ -335,7 +426,7 @@ transition: transform 400ms;
   padding: 9%;
   border-radius: 50%;
   box-shadow: 0px 0px 20px 0px rgba(2, 53, 109, 0.12);
-
+  background-color: white;
   color: rgba(2, 53, 109, 1);
   font-family: Manrope;
   font-size: 40px;
@@ -344,7 +435,6 @@ transition: transform 400ms;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
 }
 .Process .col-md-2:has(.RoundIcon) {
   display: flex;
@@ -352,22 +442,294 @@ transition: transform 400ms;
   justify-content: center;
   align-items: center;
 }
+/* .Line1::after{
+  top: 0;
+  transform: rotate(90deg);
+  height: 1%;
+  position: absolute;
+  width: 214px;
+  content: '';
+  background-image: url(./images/Line.png);
+ 
+} */
+/* --------------------------------CaseStudies--------------- */
+.CaseStudies {
+  background: rgba(248, 248, 248, 1);
+}
+.CaseStudies .container {
+  padding-bottom: 5%;
+}
+.CaseStudies h3 {
+  margin-bottom: 2%;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.CaseStudies ul {
+  padding: 0;
+}
+.CaseStudies li {
+  margin-bottom: 1%;
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.CaseStudies .Heading {
+  padding: 5% 0 4%;
+}
+
+.CaseStudies h4 {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(19, 74, 142, 1);
+}
+.CaseStudies p {
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(107, 114, 128, 1);
+}
+
+/*-----------------------TechExpertise---------------------------- */
+.TechExpertise .Cards h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.TechExpertise .Card:hover h3,
+.TechExpertise .Card:hover p,
+.TechExpertise .Card:hover a,
+.TechExpertise .Card:hover a svg path {
+  fill: white;
+  color: white;
+}
+.TechExpertise .Card {
+  padding: 7%;
+  margin-bottom: 9%;
+}
+.TechExpertise .Card .Icon svg:nth-child(2) path {
+  fill: rgb(220, 227, 235);
+}
+.TechExpertise .Card a {
+  gap: 2px;
+  display: flex;
+  align-items: center;
+}
+.TechExpertise .Card * :not(svg) {
+  margin-bottom: 3%;
+}
+.RightSection {
+  margin-top: 17%;
+}
+.TechExpertise .Card .Icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.TechExpertise .Card .Icon h4 {
+  font-family: Montserrat;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 124.8px;
+  letter-spacing: -1.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  border: 1px solid rgba(96, 165, 250, 1);
+}
+/* .TechExpertise .Card:hover .TechExpertise .Card .svg path{
+  fill: none;
+} */
+
+/* ------------------ContactUs----------- */
+.ContactUs {
+  position: relative;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(./images/ContactUsMeeting.jpg);
+  background-repeat: no-repeat;
+  padding: 8% 19%;
+}
+.ImageOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(2, 53, 109, 0.4);
+}
+
+.Form {
+  padding: 5% 6%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+  backdrop-filter: blur(24px);
+
+  /* background: rgba(255, 255, 255, 0.2); Transparent white */
+  /* backdrop-filter: blur(10px); Frosted glass effect */
+  -webkit-backdrop-filter: blur(24px); /*for safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border */
+  color: white;
+  background-color: rgba(240, 246, 253, 0.2);
+
+  text-align: center;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.ContactUs h2 {
+  color: white;
+}
+.ContactUs .BlueButton {
+  padding: 15px 16px 14px 14px;
+}
+.ContactUs h3 {
+  margin-bottom: 8%;
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: rgb(0, 0, 0);
+}
+
+/* -----------------Footer------------- */
+
+.Footer h5 {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.Footer {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #5491dc 0%,
+    rgba(84, 145, 220, 0) 100%
+  );
+  backdrop-filter: blur(117px);
+
+  padding: 6% 2% 0%;
+  background-color: rgba(3, 10, 18, 1);
+}
+.Footer .Logo object {
+  width: 104%;
+  height: auto;
+}
+.Footer h6 {
+  color: radial-gradient(
+    58.9% 75% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.Footer .col-6:has(.Logo) {
+  width: 26%;
+}
+.Footer ul {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+.Footer p {
+  color: rgba(255, 255, 255, 1);
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.Footer li a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.RoundIcon1 {
+  position: relative;
+}
+.RoundIcon2 {
+  position: relative;
+}
+.RoundIcon1::after {
+  width: 4%;
+  height: 214px;
+  content: "";
+  background-image: url(./images/Line26.svg);
+  position: absolute;
+  scale: 0.95;
+  top: 105%;
+  left: 46%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.RoundIcon2::after {
+  width: 4%;
+  height: 214px;
+  content: "";
+  background-image: url(./images/Line29.svg);
+  position: absolute;
+  scale: 0.95;
+  top: 105%;
+  left: 46%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.offset-md-1 {
+  margin-left: unset;
+}
 
 /* .Services .Cards .Card:hover svg path,
 .Process .Cards .Card:hover svg path,
@@ -407,8 +769,6 @@ transition: transform 400ms;
   text-decoration-skip-ink: none;
   color: black;
 } */
-
-
 
 /* .Process h2 {
   font-family: Nunito Sans;

@@ -1,4 +1,7 @@
-@media(max-width:900px){
+
+
+
+@media (max-width:900px){
     .Navbar .Logo{
         scale: 0.7;
     }
@@ -7,8 +10,53 @@
         margin-right: 1%;
     }
 }
-@media(max-width:768px){
+@media (max-width:768px){
+    .QuickLinks{
+        margin: auto;
+    }
+
+    .Navbar .BlueButton{
+        font-size: 8px;
+        padding-left: 10%;
+    }
+    
+
+.Process .Cards{
+    margin-bottom: 4%;
+    display: flex;
+}
+.Process .Card{
+    order: 2;
+}
+.Process .col-md-2{
+    order: 1;
+}
+
+
+    .RoundIcon1::after, .RoundIcon2::after{
+        display: none;
+    }
+   
+    *{
+        line-height: unset !important;
+    }
     .SectorExpertise .Card{
         margin-bottom: 2%;
     }
 }
+
+@media (max-width:576px){
+
+   
+h1,h5, span{
+    font-size: 1.5rem !important;
+}
+h2{
+    font-size: 1.2rem !important;
+}
+p, ul, li{
+    font-size: 0.8rem !important;
+}
+}
+
+
