@@ -1,4 +1,50 @@
+// to hide icon on click on sidebar button--------
+let FullSideBar = document.getElementById('demo');
+let SidebarOpenButton  = document.getElementById("SidebarOpenButton");
+let SidebarCloseButton = document.getElementById("SidebarCloseButton");
+SidebarCloseButton.addEventListener('click', ()=>{ SidebarOpenButton.classList.remove('Hide'); });
+SidebarOpenButton.addEventListener('click', function (){ 
+    this.classList.add('Hide');
+    DetectClickOutsideSidebar();
+});
 
+function DetectClickOutsideSidebar(){
+
+console.log(event);
+
+  
+    document.addEventListener('click', handleClickOutside);
+    
+
+// document.addEventListener('click', DetectClickOutsideSidebar);
+}
+
+function handleClickOutside(event){
+    if(!FullSideBar.contains(event.target) &&!SidebarOpenButton.contains(event.target)){
+        SidebarOpenButton.classList.remove('Hide');
+      console.log(event,"handel click outside");
+      document.removeEventListener("click",handleClickOutside );
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------to apply styles on cards and on icons on click on each other------
 let RoundIcons =document.querySelectorAll('.Process .RoundIcon');
 let Cards = document.querySelectorAll('.Process .Card');
 

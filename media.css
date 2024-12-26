@@ -11,6 +11,51 @@
     }
 }
 @media (max-width:768px){
+
+    h1 , span{
+        font-size: clamp(1.563rem, 0.93rem + 2.75vw, 2.25rem) !important;
+    }
+   
+    h3{
+        font-size: clamp(0.875rem, 0.472rem + 1.75vw, 1.313rem) !important;
+    }
+
+    .CaseStudies h4{
+       font-size:  clamp(1.375rem, 0.34rem + 4.5vw, 2.5rem) !important;
+    }
+    .CaseStudies h3{
+        font-size: (1.25rem, 1.02rem + 1vw, 1.5rem) !important;
+    }
+
+
+    .ContactUs h3{
+        font-size: clamp(0.75rem, 0.405rem + 1.5vw, 1.125rem) !important;
+    }
+    footer h5{
+font-size:clamp(1.063rem, 0.775rem + 1.25vw, 1.375rem)   !important;
+    }
+
+
+
+
+
+
+
+
+    .TechExpertise .Card {
+        padding: 3%;
+    }
+    .TechExpertise .Card h3{
+       font-size: 14px;
+    }
+
+   .TechExpertise .Cards .Card a, .SectorExpertise .Cards .Card, .Services .Cards .Card a{
+    font-size: 12px;
+   }
+
+    .RoundIcon {
+        padding: 4%;
+    }
     .QuickLinks{
         margin: auto;
     }
@@ -48,7 +93,7 @@
 @media (max-width:576px){
 
    
-h1,h5, span{
+/* h1,h5, span{
     font-size: 1.5rem !important;
 }
 h2{
@@ -56,7 +101,7 @@ h2{
 }
 p, ul, li{
     font-size: 0.8rem !important;
-}
+} */
 }
 
 
