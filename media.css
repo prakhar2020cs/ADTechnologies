@@ -22,8 +22,12 @@
 }
  @media (max-width:768px){
 
-
-
+   section.Process, section.Services{
+    padding-inline: 48px;
+   }
+section{
+    padding-inline: 16px;
+}
     h1 , span{
         font-size: clamp(1.563rem, 0.93rem + 2.75vw, 2.25rem) !important;
     }
@@ -78,6 +82,12 @@ font-size:clamp(1.063rem, 0.775rem + 1.25vw, 1.375rem)   !important;
     }
     
 
+    .Services .col-md-4{
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+
+    }
+
 .Process .Cards{
     margin-bottom: 4%;
     display: flex;
@@ -98,7 +108,12 @@ font-size:clamp(1.063rem, 0.775rem + 1.25vw, 1.375rem)   !important;
         line-height: unset !important;
     }
     .SectorExpertise .Card{
+        max-width: 600px;
         margin-bottom: 2%;
+    }
+
+    TechExpertise{
+        padding-inline: 30px;
     }
 }
 

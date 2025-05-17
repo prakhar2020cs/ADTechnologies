@@ -5,22 +5,24 @@ let SidebarCloseButton = document.getElementById("SidebarCloseButton");
 SidebarCloseButton.addEventListener('click', ()=>{ SidebarOpenButton.classList.remove('Hide'); });
 SidebarOpenButton.addEventListener('click', function (){ 
     this.classList.add('Hide');
-    DetectClickOutsideSidebar();
+    document.addEventListener('click', handleClickOutside);
 });
 
-function DetectClickOutsideSidebar(){
 
-console.log(event);
+
 
   
-    document.addEventListener('click', handleClickOutside);
+
     
 
 // document.addEventListener('click', DetectClickOutsideSidebar);
-}
+
 
 function handleClickOutside(event){
+    // let clicked = false;
+    console.log("handleclick outside--clicked ")
     if(!FullSideBar.contains(event.target) &&!SidebarOpenButton.contains(event.target)){
+
         SidebarOpenButton.classList.remove('Hide');
       console.log(event,"handel click outside");
       document.removeEventListener("click",handleClickOutside );
